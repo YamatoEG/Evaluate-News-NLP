@@ -1,0 +1,31 @@
+form {
+    border: 1px solid #545454;
+    border-radius: 3px;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    padding: 5px 20px;
+    width: 100%;
+    line-height: 16px;
+    margin: 10px 0;
+}
+
+#results{
+border: solid black 1px;
+display: block;
+padding: 5px;
+margin: 10px;
+font-weight: 200;
+font-family: Arial, Helvetica, sans-serif;
+align-items: center;
+color : wheat;
+}
+#results h2,p{
+    padding: 3px;
+}
+button:hover{
+    background-color: orangered;
+    border-radius: 5px;
+}

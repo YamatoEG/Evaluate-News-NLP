@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+</head>
 
-        <header>
-            <div class="">
-                Logo
+<body>
+
+    <header>
+        <div class="">
+            <img src="../assets/logo.png" alt="NLP-logo">
+        </div>
+        <div class="">
+            <a href="index.html">Home</a>
+            <a href="#">about</a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <form id="urlForm">
+                <input id="name" type="text" name="url" placeholder="Enter URL" required>
+                <button id="submitButton" type="submit">Submit</button>
+            </form>
+
+
+        </section>
+
+        <section>
+            <strong>Form Results:</strong>
+            <div id="results">
+                <h2 id="text" style="display: block;"></h2>
+                <p id="polarity" style="display: block;"></p>
+                <p id="irony" style="display: block;"></p>
+                <p id="confidence" style="display: block;"></p>
+                <p id="subjectivity" style="display: block;"></p>
             </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
+        </section>
+    </main>
 
-        <main>
-            <section>
-                <form id="urlForm">
-                    <input id="name" type="text" name="url" placeholder="Enter URL" required>
-                    <button id="submitButton" type="submit">Submit</button>
-                </form>
-                
-            </section>
+    <footer>
+        <p> &copy; Evaluate News Article. All rights reserved.</p>
+        <p>developed by Ahmad Mahmoud.</p>
+    </footer>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(function (registration) {
+                    console.log('Registration successful, scope is:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.log('Service worker registration failed, error:', error);
+                });
+        }
+    </script>
+</body>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
-
-        <footer>
-            <p>This is a footer</p>
-        </footer>
-
-    </body>
 </html>
